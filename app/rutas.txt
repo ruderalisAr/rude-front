@@ -1,0 +1,99 @@
+pages/
+  _app.tsx
+  _document.tsx
+  index.tsx
+
+src/
+  components/
+  lib/
+  styles/
+
+app/
+  (common)
+    layout.tsx
+    error.tsx
+  
+  (reader)
+    page.tsx
+    feed/
+      page.tsx
+    blog/
+      [slug]/
+        page.tsx
+    shop/
+      [id]/
+        page.tsx
+    about.tsx
+    terms.tsx
+
+  (user)
+    page.tsx
+    feed/
+      page.tsx
+    blog/
+      [slug]/
+        page.tsx
+    shop/
+      [id]/
+        page.tsx
+    about.tsx
+    terms.tsx
+
+  (member)
+    page.tsx
+    feed/
+      page.tsx
+    blog/
+      [slug]/
+        page.tsx
+    shop/
+      [id]/
+        page.tsx
+    about.tsx
+    terms.tsx
+
+  (ambassador)
+    page.tsx
+    feed/
+      page.tsx
+    blog/
+      [slug]/
+        page.tsx
+    shop/
+      [id]/
+        page.tsx
+    about.tsx
+    terms.tsx
+
+  (partner)  
+    page.tsx
+    feed/
+      page.tsx
+    blog/
+      [slug]/
+        page.tsx
+    shop/
+      [id]/
+        page.tsx
+    about.tsx
+    terms.tsx
+
+  (moderator)
+    page.tsx
+    users/
+      page.tsx
+      [id]/
+        page.tsx
+    admin/
+      page.tsx
+
+  (admin)
+    page.tsx
+    users/
+      page.tsx
+      [id]/
+        page.tsx
+    admin/
+      page.tsx
+    config/
+      page.tsx
