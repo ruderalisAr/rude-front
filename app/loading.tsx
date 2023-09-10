@@ -1,7 +1,7 @@
-interface loadingProperties {}
+interface LoadingPageProperties {}
 
-const loading = ({}: loadingProperties) => {
-	return <div>loading</div>
+const LoadingPage = ({}: LoadingPageProperties) => {
+	return <div>LoadingPage</div>
 }
 
-export default loading
+export default LoadingPage

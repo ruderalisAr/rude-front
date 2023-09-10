@@ -1,7 +1,9 @@
-interface errorProperties {}
+"use client"
 
-const error = ({}: errorProperties) => {
-	return <div>error</div>
+interface ErrorPageProperties {}
+
+const ErrorPage = ({}: ErrorPageProperties) => {
+  return <div>ErrorPage</div>
 }
 
-export default error
+export default ErrorPage

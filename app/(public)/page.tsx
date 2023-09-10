@@ -1,7 +1,7 @@
-interface pageProperties {}
+interface HomePageProperties {}
 
-const page = ({}: pageProperties) => {
-	return <div>page</div>
+const HomePage = ({}: HomePageProperties) => {
+  return <div>HomePage</div>
 }
 
-export default page
+export default HomePage

@@ -1,7 +1,7 @@
-interface not-foundProperties {}
+interface NotFoundPageProperties {}
 
-const not-found = ({}: not-foundProperties) => {
-	return <div>not-found</div>
+const NotFoundPage = ({}: NotFoundPageProperties) => {
+  return <div>NotFoundPage</div>
 }
 
-export default not-found
+export default NotFoundPage
