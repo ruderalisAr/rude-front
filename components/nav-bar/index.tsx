@@ -1,48 +1,45 @@
+"use client"
+import { Avatar, Dropdown, Navbar } from "flowbite-react"
 import Image from "next/image"
-// import logo from "/public/logo.png"
-const Navbar = () => {
+import logo from "public/logo.png"
+
+export default function NavbarWithDropdown() {
   return (
-    <nav className="bg-gray-900 text-white">
-      <div className="container mx-auto flex justify-between py-4">
-        <a href="/" className="flex items-center">
-          <Image src="/public/logo.png" width={50} height={50} alt="" />
-          <span className="font-bold">Rude Argentina</span>
-        </a>
-        <ul className="ml-auto flex">
-          <li>
-            <a href="/inicio" className="mr-4">
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a href="https://rudeargentina.com/shop" className="mr-4">
-              Shop
-            </a>
-          </li>
-          <li>
-            <a href="https://rudeargentina.com/crew" className="mr-4">
-              Crew
-            </a>
-          </li>
-          <li>
-            <a href="https://rudeargentina.com/plataforma" className="mr-4">
-              Plataforma
-            </a>
-          </li>
-          <li>
-            <a href="https://rudeargentina.com/contactanos" className="mr-4">
-              Contactanos
-            </a>
-          </li>
-          <li>
-            <a href="https://rudeargentina.com/blog" className="mr-4">
-              Blog
-            </a>
-          </li>
-        </ul>
+    <Navbar className=" justify-between" fluid rounded>
+      <Navbar.Brand href="https://flowbite-react.com">
+        {/* className="mr-3 h-6 sm:h-9" */}
+        <Image src={logo} alt="main logo" height={60} />
+        {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span> */}
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <Dropdown
+          arrowIcon={false}
+          inline
+          label={
+            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+          }
+        >
+          <Dropdown.Header>
+            <span className="block text-sm">Bonnie Green</span>
+            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+          </Dropdown.Header>
+          <Dropdown.Item>Dashboard</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item>Sign out</Dropdown.Item>
+        </Dropdown>
+        <Navbar.Toggle />
       </div>
-    </nav>
+      <Navbar.Collapse>
+        <Navbar.Link href="#" active>
+          Home
+        </Navbar.Link>
+        <Navbar.Link href="#">About</Navbar.Link>
+        <Navbar.Link href="#">Services</Navbar.Link>
+        <Navbar.Link href="#">Pricing</Navbar.Link>
+        <Navbar.Link href="#">Contact</Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
-
-export default Navbar

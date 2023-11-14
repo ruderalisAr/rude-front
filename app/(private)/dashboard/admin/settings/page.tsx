@@ -1,7 +1,15 @@
-interface pageProperties {}
+import AuthSecure from "wrappers/auth-secure"
 
-const page = ({}: pageProperties) => {
-	return <div>page</div>
+interface SettingsPageProperties {
+  children?: React.ReactNode
 }
 
-export default page
+const SettingsPage = ({}: SettingsPageProperties) => {
+  return (
+    <AuthSecure role="admin">
+      <div>page</div>
+    </AuthSecure>
+  )
+}
+
+export default SettingsPage
