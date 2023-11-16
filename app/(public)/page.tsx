@@ -1,6 +1,4 @@
-import Image from "next/image"
-
-import Hero from "components/footer/hero"
+import Hero from "components/hero"
 import Newest from "components/newest"
 
 export const dynamic = "force-dynamic"

@@ -20,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <CartProvider>
           <Navbar />
-          53:31
           {/* <ShoppingCartModal /> */}
           {children}
         </CartProvider>
