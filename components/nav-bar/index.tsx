@@ -1,45 +1,61 @@
 "use client"
-import { Avatar, Dropdown, Navbar } from "flowbite-react"
-import Image from "next/image"
-import logo from "public/logo.png"
 
-export default function NavbarWithDropdown() {
+import { ShoppingBag } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useShoppingCart } from "use-shopping-cart"
+import { Button } from "@/components/ui/button"
+
+const links = [
+  { name: "Home", href: "/" },
+  { name: "Men", href: "/Men" },
+  { name: "Women", href: "/Women" },
+  { name: "Teens", href: "/Teens" },
+]
+
+export default function Navbar() {
+  const pathname = usePathname()
+  const { handleCartClick } = useShoppingCart()
+
   return (
-    <Navbar className=" justify-between" fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        {/* className="mr-3 h-6 sm:h-9" */}
-        <Image src={logo} alt="main logo" height={60} />
-        {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span> */}
-      </Navbar.Brand>
-      <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-          </Dropdown.Header>
-          <Dropdown.Item>Dashboard</Dropdown.Item>
-          <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Item>Earnings</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
-        </Dropdown>
-        <Navbar.Toggle />
+    <header className="mb-8 border-b">
+      <div className="mx-auto flex max-w-2xl items-center justify-between px-4 sm:px-6 lg:max-w-7xl">
+        <Link href="/">
+          <h1 className="text-2xl font-bold md:text-4xl">
+            Rude<span className="text-primary">Club</span>
+          </h1>
+        </Link>
+
+        <nav className="hidden gap-12 lg:flex 2xl:ml-16">
+          {links.map((link, idx) => (
+            <div key={idx}>
+              {pathname === link.href ? (
+                <Link className="text-lg font-semibold text-primary" href={link.href}>
+                  {link.name}
+                </Link>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-primary"
+                >
+                  {link.name}
+                </Link>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        <div className="flex divide-x border-r sm:border-l">
+          <Button
+            variant={"outline"}
+            onClick={() => handleCartClick()}
+            className="flex h-12 w-12 flex-col gap-y-1.5 rounded-none sm:h-20 sm:w-20 md:h-24 md:w-24"
+          >
+            <ShoppingBag />
+            <span className="hidden text-xs font-semibold text-gray-500 sm:block">Cart</span>
+          </Button>
+        </div>
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
+    </header>
   )
 }
