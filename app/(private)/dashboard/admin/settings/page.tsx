@@ -1,10 +1,6 @@
-import AuthSecure from "wrappers/auth-secure"
+import AuthSecure from 'wrappers/auth-secure'
 
-interface SettingsPageProperties {
-  children?: React.ReactNode
-}
-
-const SettingsPage = ({}: SettingsPageProperties) => {
+const SettingsPage = () => {
   return (
     <AuthSecure role="admin">
       <div>page</div>

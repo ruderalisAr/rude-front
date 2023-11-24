@@ -1,7 +1,5 @@
-interface LoadingPageProperties {}
-
-const LoadingPage = ({}: LoadingPageProperties) => {
-	return <div>LoadingPage</div>
+const LoadingPage = () => {
+  return <div>LoadingPage</div>
 }
 
 export default LoadingPage

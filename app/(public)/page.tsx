@@ -1,7 +1,7 @@
-import Hero from "components/hero"
-import Newest from "components/newest"
+import Hero from 'components/hero'
+import Newest from 'components/newest'
 
-export const dynamic = "force-dynamic"
+export const dynamic = 'force-dynamic'
 
 export default function Home() {
   return (

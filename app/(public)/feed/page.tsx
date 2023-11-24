@@ -1,6 +1,5 @@
-interface pageProperties {}
 
-const page = ({}: pageProperties) => {
+const page = () => {
 	return <div>page</div>
 }
 

@@ -3,9 +3,8 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "components/nav-bar"
 import CartProvider from "components/providers"
+import ShoppingCartModal from "components/shopping-cart-modal"
 
-// import Navbar from "./components/Navbar"
-// import ShoppingCartModal from "./components/ShoppingCartModal"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,10 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <CartProvider>
           <Navbar />
-          {/* <ShoppingCartModal /> */}
+          <ShoppingCartModal />
           {children}
         </CartProvider>
       </body>
     </html>
   )
 }
+

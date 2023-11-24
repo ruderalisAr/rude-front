@@ -1,6 +1,4 @@
-interface NotFoundPageProperties {}
-
-const NotFoundPage = ({}: NotFoundPageProperties) => {
+const NotFoundPage = () => {
   return <div>NotFoundPage</div>
 }
 
