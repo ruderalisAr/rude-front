@@ -3,7 +3,7 @@ import { fullProduct } from "app/interface";
 import { client } from "app/lib/sanity";
 import AddToBag from "components/add-to-bag";
 import CheckoutNow from "components/checkout-now";
-import ImageGallery from "components/iamge-galery";
+import ImageGallery from "components/image-gallery";
 import { Star, Truck } from "lucide-react";
 
 async function getData(slug: string) {
