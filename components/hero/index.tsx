@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import { client, urlFor } from "app/lib/sanity"
+import Image from 'next/image'
+import Link from 'next/link'
+import { client, urlFor } from 'app/lib/sanity'
 
 async function getData() {
   const query = "*[_type == 'heroImage'][0]"
@@ -20,7 +20,8 @@ export default async function Hero() {
             Top Fashion for a top price!
           </h1>
           <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
-            We sell only the most exclusive and high quality products for you. We are the best so come and shop with us.
+            We sell only the most exclusive and high quality products for you.
+            We are the best so come and shop with us.
           </p>
         </div>
 

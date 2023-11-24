@@ -1,10 +1,10 @@
-import { Button } from "components/ui/button";
-import { fullProduct } from "app/interface";
-import { client } from "app/lib/sanity";
-import AddToBag from "components/add-to-bag";
-import CheckoutNow from "components/checkout-now";
-import ImageGallery from "components/image-gallery";
-import { Star, Truck } from "lucide-react";
+import { Star, Truck } from 'lucide-react'
+import { fullProduct } from 'app/interface'
+import { client } from 'app/lib/sanity'
+import AddToBag from 'components/add-to-bag'
+import CheckoutNow from 'components/checkout-now'
+import ImageGallery from 'components/image-gallery'
+import { Button } from 'components/ui/button'
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
@@ -16,21 +16,21 @@ async function getData(slug: string) {
           "slug": slug.current,
           "categoryName": category->name,
           price_id
-      }`;
+      }`
 
-  const data = await client.fetch(query);
+  const data = await client.fetch(query)
 
-  return data;
+  return data
 }
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic'
 
 export default async function ProductPge({
   params,
 }: {
-  params: { slug: string };
+  params: { slug: string }
 }) {
-  const data: fullProduct = await getData(params.slug);
+  const data: fullProduct = await getData(params.slug)
 
   return (
     <div className="bg-white">
@@ -107,5 +107,5 @@ export default async function ProductPge({
         </div>
       </div>
     </div>
-  );
+  )
 }

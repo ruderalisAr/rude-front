@@ -1,12 +1,10 @@
-"use client";
+'use client'
 
-import { useShoppingCart } from "use-shopping-cart"
-import { Button } from "components/ui/button";
+import { useShoppingCart } from 'use-shopping-cart'
 
-
-
-import { urlFor } from "app/lib/sanity";
-import { ProductCart } from "components/add-to-bag";
+import { urlFor } from 'app/lib/sanity'
+import { ProductCart } from 'components/add-to-bag'
+import { Button } from 'components/ui/button'
 
 export default function CheckoutNow({
   currency,
@@ -16,10 +14,10 @@ export default function CheckoutNow({
   price,
   price_id,
 }: ProductCart) {
-  const { checkoutSingleItem } = useShoppingCart();
+  const { checkoutSingleItem } = useShoppingCart()
 
   function buyNow(priceId: string) {
-    checkoutSingleItem(priceId);
+    checkoutSingleItem(priceId)
   }
 
   const product = {
@@ -29,15 +27,15 @@ export default function CheckoutNow({
     currency: currency,
     image: urlFor(image).url(),
     price_id: price_id,
-  };
+  }
   return (
     <Button
       variant="outline"
       onClick={() => {
-        buyNow(product.price_id);
+        buyNow(product.price_id)
       }}
     >
       Checkout Now
     </Button>
-  );
+  )
 }
