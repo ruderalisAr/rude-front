@@ -1,8 +1,6 @@
-"use client"
+'use client'
 
-interface ErrorPageProperties {}
-
-const ErrorPage = ({}: ErrorPageProperties) => {
+const ErrorPage = () => {
   return <div>ErrorPage</div>
 }
 

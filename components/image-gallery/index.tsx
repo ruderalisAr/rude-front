@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import Image from "next/image";
+import Image from 'next/image'
 
-import { useState } from "react";
-import { urlFor } from "app/lib/sanity"
+import { useState } from 'react'
+import { urlFor } from 'app/lib/sanity'
 
 interface iAppProps {
-  images: any;
+  images: any
 }
 
 export default function ImageGallery({ images }: iAppProps) {
-  const [bigImage, setBigImage] = useState(images[0]);
+  const [bigImage, setBigImage] = useState(images[0])
 
   const handleSmallImageClick = (image: any) => {
-    setBigImage(image);
-  };
+    setBigImage(image)
+  }
   return (
     <div className="grid gap-4 lg:grid-cols-5">
       <div className="order-last flex gap-4 lg:order-none lg:flex-col">
@@ -46,5 +46,5 @@ export default function ImageGallery({ images }: iAppProps) {
         </span>
       </div>
     </div>
-  );
+  )
 }
