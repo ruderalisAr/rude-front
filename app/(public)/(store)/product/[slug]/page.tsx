@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "components/ui/button";
 import { fullProduct } from "app/interface";
 import { client } from "app/lib/sanity";
 import AddToBag from "components/add-to-bag";

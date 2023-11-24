@@ -1,14 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 import Navbar from "components/nav-bar"
 import CartProvider from "components/providers"
 import ShoppingCartModal from "components/shopping-cart-modal"
@@ -24,23 +16,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className, 'bg-gray-700'}>
+      <body className={inter.className}>
         <CartProvider>
-        <Sheet >
-            <SheetTrigger>Open</SheetTrigger>
-            <SheetContent side={'right'}>
-              <SheetHeader>
-                <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-                <SheetDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet>
           <Navbar />
-          {/* <ShoppingCartModal /> */}
-          {/* {children} */}
+          <ShoppingCartModal />
+          {children}
         </CartProvider>
       </body>
     </html>

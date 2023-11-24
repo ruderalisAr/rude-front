@@ -4,7 +4,7 @@ import { ShoppingBag } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useShoppingCart } from "use-shopping-cart"
-import { Button } from "@/components/ui/button"
+import { Button } from "components/ui/button"
 
 const links = [
   { name: "Home", href: "/" },
