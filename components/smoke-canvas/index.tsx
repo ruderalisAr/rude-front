@@ -21,7 +21,7 @@ const SmokeCanvas = () => {
     const ctx = canvas.getContext('2d')
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-    const smoke = SmokeMachine(ctx, [128, 128, 128])
+    const smoke = SmokeMachine(ctx, [128, 128, 118])
 
     smoke.start()
 
