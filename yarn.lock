@@ -1192,6 +1192,11 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bijection/smoke@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@bijection/smoke/-/smoke-1.0.2.tgz#558b39c603ae1ee89d95838442983782d4fd7bc0"
+  integrity sha512-K4L+2hqsKsLRabu7J2pD9mlIUopb+W07r0e6gohKdDfsc7immhhhYRGaX1+hF19W2eXnFmdUROqXLvsZBysyfw==
+
 "@codemirror/autocomplete@^6.0.0", "@codemirror/autocomplete@^6.1.0":
   version "6.11.0"
   resolved "https://registry.npmjs.org/@codemirror/autocomplete/-/autocomplete-6.11.0.tgz"
